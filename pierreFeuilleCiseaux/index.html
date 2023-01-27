@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d5af8b1db6.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <!-- <link rel="apple-touch-icon" href="favicon.png"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <video id="background-video" autoplay loop muted>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-3d-hallway-walls-with-wavy-lines-neon-light-34334-large.mp4">
+            </video>
+        <section class="gamecontainer ">
+            <h1>Pierre Feuille Ciseaux</h1>
+            <p>Choisissez une figure</p>
+            <article class="flex center">
+                <div class="mainSection"><img class="img element" id="pierre" src="assets/img/rock.png" alt="rock"></div>
+                <div class="mainSection"><img class="img element" id="feuille" src="assets/img/sheet.png" alt="sheet"></div>
+                <div class="mainSection"><img class="img element" id="ciseaux" src="assets/img/scisor.png" alt="scisor"></div>
+            </article>
+            <article>
+                <h2>Victoire en 3 points</h2>
+                <div class="tableContainer">
+                    <div class="divTableContainer">
+                        <p><strong>User</strong></p>
+                        <hr>
+                        <p>Points</p>
+                        <p id="userPoints">0</p>
+                        <p>Victoires</p>
+                        <p id="vU">0</p>
+                    </div>
+                    <div class="divTableContainer">
+                        <p><strong>Computer</strong></p>
+                        <hr>
+                        <p>Points</p>
+                        <p id="computerPoints">0</p>
+                        <p>Victoires</p>
+                        <p id="vC">0</p>
+                    </div>
+                </div>
+            </article>
+
+            <div id="resetBtn"><button><a href="#" alt="reset button">reset</a></button></div>
+        </section>
+    </main>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

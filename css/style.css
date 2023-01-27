@@ -1,0 +1,499 @@
+/**************************GENERALITIES***************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+    color: var(--white);
+}
+
+:root {
+    font-size: 62.5%;
+    --grey: #ddd;
+    --white: #fff;
+    --dark: #0C0711;
+    --blue: #021027;
+    --purple: #794985;
+    --lightPurple: #CA93B4;
+    --font: 'Open Sans', sans-serif;
+    --font-size-default: 2.1rem;
+    --font-size-h1: 3.6rem;
+    --font-size-h2: 3rem;
+    --font-size-h3: 2.5rem;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+
+}
+
+
+body {
+    font-size: var(--font-size-default);
+    font-family: 'Open Sans', sans-serif;
+    color: var(--white);
+    line-height: 2;
+}
+
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+.background {
+    background: url(../img/background-portfolio.jpg) repeat center/cover;
+    height: 100vh;
+}
+
+img {
+    height: auto;
+    width: 60%;
+    object-fit: cover;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#background-video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.taCenter {
+    text-align: center;
+}
+
+
+/**************************UTILITIES***************************************/
+
+.flex {
+    display: flex;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.jc-space-between {
+    justify-content: space-between;
+}
+
+.jc-space-around {
+    justify-content: space-around;
+}
+
+.jc-space-evenly {
+    justify-content: space-evenly;
+}
+
+.jc-space-center {
+    justify-content: center;
+}
+
+.jc-end {
+    justify-content: flex-end;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.ai-end {
+    align-items: end;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.padding {
+    padding: 2rem 1rem;
+}
+
+
+/**************************HEADER***************************************/
+
+/***HEADER NAV***/
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav i {
+    font-size: 3rem;
+}
+
+/***Hover NAV***/
+
+nav i:hover {
+    color: var(--lightPurple);
+}
+
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 3rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.active i {
+    color: var(--purple);
+    font-size: 4rem;
+}
+
+#burger-toggle,
+.burger {
+    display: none;
+}
+
+/***Button***/
+
+.button {
+    border: .1rem solid var(--purple);
+    border-radius: 1rem;
+    color: var(--white);
+    background-color: var(--dark);
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem 2rem;
+    margin: 2rem;
+    width: 40%;
+    transition: all .3s ease-in-out
+}
+
+.button:hover {
+    background-color: var(--purple);
+    border: .1rem solid var(--lightPurple);
+    color: var(--white);
+
+}
+
+/**************************MAIN************************************/
+
+/*********Profil********************/
+
+.textPresentation {
+    background-color: var(--dark);
+}
+
+strong {
+    color: var(--purple);
+}
+
+/*********Skills********************/
+
+.skills {
+    width: 100%;
+}
+
+.skills li {
+    list-style-type: none;
+    width: 33.33%;
+
+
+}
+
+.skills li ul li {
+    width: 100%;
+    display: block;
+    padding: 1rem 3rem;
+}
+
+.skills li p {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cv {
+    margin-left: 3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.cv i {
+    font-size: 5rem;
+    color: var(--white);
+}
+
+.cv i:hover {
+    color: var(--grey);
+}
+
+/*********Works********************/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    /*auto-fit gere les colonne seul en fonction de la largeur d'ecran*/
+    /*la fonction minmax donne la largeur a chaque portion en fonction de la largeur du container mais ne depasse pas 300px*/
+}
+
+.grid img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: blur(0px);
+    transition: filter .5s ease-out;
+    padding: 3rem;
+}
+
+.grid article {
+    position: relative;
+}
+
+.title {
+    font-size: var(--font-size-h2);
+    letter-spacing: .4rem;
+    position: absolute;
+    z-index: 1;
+    color: var(--grey);
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-out;
+    opacity: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.grid article:hover {
+    cursor: pointer;
+}
+
+.grid article:hover img {
+    filter: blur(5px);
+}
+
+.grid article:hover .title {
+    z-index: 1;
+    opacity: 1;
+}
+
+.worksBg {
+    background-color: var(--dark);
+    margin: .2rem;
+}
+
+.skillsBg li {
+    background-color: var(--dark);
+    border: .1rem solid var(--purple);
+}
+
+.skillsBg ul li {
+    border: none;
+}
+
+/************footer***********************/
+
+footer {
+    position: relative;
+}
+
+.message {
+    color: var(--purple);
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: -50rem;
+
+}
+
+/*************************MEDIAQUERIES****************************************/
+
+/* ********************** VERSION TABLETTE*800px*************************** */
+
+@media screen and (max-width:800px) {
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-100%);
+        transition: transform .3s;
+        z-index: 98;
+    }
+
+    .nav-list li {
+        margin: 1rem;
+        padding-left: 0;
+    }
+    .nav-list li a {
+        display: inline-block;
+        font-size: 1rem;
+        transition: all .3s;
+    }
+    .nav-list li i {
+        padding: .5rem;
+    }
+
+
+    .nav-list li i:hover {
+        padding: .5rem;
+        background-color: #fff;
+        border-radius: 10rem;
+        color: var(--dark);
+        transform: translateY(-1rem);
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        width: 3rem;
+        height: 3rem;
+        z-index: 99;
+
+    }
+    /*Premiere ligne*/
+    .burger .bar {
+        display: inline-block;
+        width: 3rem;
+        height: .2rem;
+        background-color: #fff;
+        position: relative;
+        transition: all .3s;
+    }
+    /*deux autres ligne*/
+    .burger .bar::before,
+    .burger .bar::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        transition: all .3s;
+    }
+    .burger .bar::before {
+        transform: translateY(-1rem);
+    }
+    .burger .bar::after {
+        transform: translateY(1rem);
+    }
+
+    /*croix*/
+    #burger-toggle:checked~.nav-list {
+        transform: translateY(10rem);
+        background-color: transparent;
+
+    }
+
+    #burger-toggle:checked~.burger,
+    #burger-toggle:checked~.burger .bar,
+    #burger-toggle:checked~.nav-list li a {
+        background-color: transparent;
+    }
+
+    #burger-toggle:checked~.burger .bar::before {
+        transform: rotate(45deg);
+    }
+
+    #burger-toggle:checked~.burger .bar::after {
+        transform: rotate(-45deg);
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skills li {
+        width: 100%;
+    }
+}
+
+
+/* ********************** VERSION Mobile*400px*************************** */
+
+@media screen and (max-width: 400px) {
+    header nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

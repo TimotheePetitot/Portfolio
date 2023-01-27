@@ -1,0 +1,280 @@
+/*Generalities*/
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #333;
+}
+
+.gamecontainer {
+    padding-top: 2rem;
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    color: rgb(245, 224, 89);
+}
+
+p,
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+hr {
+    background-color: rosybrown;
+    margin: .5rem;
+}
+
+h1,
+p,
+h2,
+.table,
+h3 {
+    text-align: center;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1000;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+#background-video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    background-repeat: no-repeat;
+}
+
+/*Animation image*/
+
+.img {
+    width: 13rem;
+    height: 13rem;
+    cursor: pointer;
+    padding: 2rem;
+    transition: all .6s ease-out;
+}
+
+
+.mainSection img:hover,
+.move {
+    animation: animation-name 2s infinite
+}
+
+@keyframes animation-name {
+    0% {
+        transform: rotate(45deg);
+
+    }
+    25% {
+        transform: rotate(-45deg);
+        transform: scale(1.5);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    75% {
+        transform: rotate(-45deg);
+        transform: scale(1.5);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+/*Modal*/
+
+.displayNone {
+    display: none;
+}
+
+main {
+    position: relative;
+}
+
+h3 {
+    background: url(../img/th4.png) repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.modal img {
+    width: 15rem;
+    height: 15rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+
+.result {
+    color: #fff;
+    font-size: 5rem;
+    border: .1rem solid transparent;
+    background-color: #333;
+}
+
+/*fermeture modal*/
+
+.croix {
+    margin: 0 auto;
+    position: relative;
+    top: 0rem;
+    left: 1rem;
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.croix::before,
+.croix::after {
+    position: absolute;
+    top: 0;
+    content: "";
+    display: block;
+    height: 2rem;
+    width: .3rem;
+    border-radius: 2rem;
+    background-color: rgb(99, 9, 9);
+    margin: 0 auto;
+}
+
+.croix::before {
+    transform: rotate(45deg);
+}
+
+.croix::after {
+    transform: rotate(-45deg);
+}
+
+/*table*/
+
+.tableContainer {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+}
+
+.divTableContainer {
+    width: 50%;
+    border: .2rem solid rgb(245, 224, 89);
+    border-radius: 2rem;
+    margin: .5rem;
+
+}
+
+#resetBtn {
+    text-align: center;
+    padding: 1rem;
+    z-index: 100;
+}
+
+button {
+    padding: .5rem 2rem;
+    background-color: rosybrown;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+#resetBtn a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: rgb(245, 224, 89);
+}
+
+
+/*MediaQueries*/
+
+@media screen and (max-width:650px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+
+    .img {
+        width: 8rem;
+        height: 8rem;
+        cursor: pointer;
+        padding: 1rem;
+        transition: all .6s ease-out;
+    }
+
+    .modal img {
+        width: 11rem;
+        height: 11rem;
+        text-align: center;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .gamecontainer {
+
+        height: 100vh;
+    }
+    .modal {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .result {
+        font-size: 4rem;
+        padding: 1rem 2rem;
+    }
+
+    .gamecontainer p {
+        font-size: 1rem;
+    }
+
+    .croix {
+        top: 3rem;
+        left: 3rem;
+    }
+
+}

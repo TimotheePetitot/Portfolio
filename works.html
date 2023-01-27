@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Timothée Petitot</title>
+
+    <meta name='Portfolio Timothée Petitot' content='Description de Portfolio Timothée Petitot'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Normalize-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--FAVICON-->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!--FONT-AWESOME-->
+    <script src="https://kit.fontawesome.com/d5af8b1db6.js" crossorigin="anonymous"></script>
+
+    <!--FONT-FAMILY-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--Style interne-->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+</head>
+
+<body>
+    <video id="background-video" autoplay loop muted>
+    <source src="https://player.vimeo.com/external/410610193.hd.mp4?s=63b5c756aaa4f89673ab73ceb960381883922b2c&profile_id=174" type="video/mp4">
+    </video>
+    <header>
+        <nav class="container">
+            <h1>T<strong>i</strong>m<strong>o</strong>t<strong>h</strong>é<strong>e</strong> Petitot</h1>
+            <input type="checkbox" id="burger-toggle" />
+            <label for="burger-toggle" class="burger">
+            <span class="bar"></span>
+        </label>
+            <ul class="nav-list">
+                <li><a href="index.html" title="Lien vers mon profil" rel="noopener"><i class="fa-solid fa-house-user"></i></a></li>
+                <li><a class="active" href="#" title="Lien vers mes travaux" rel="noopener"><i class="fa-solid fa-briefcase"></i></a></li>
+                <li><a href="skills.html" title="Lien vers mes compétences" rel="noopener"><i class="fa-solid fa-screwdriver-wrench"></i></a></li>
+                <li><a href="mailto:timothee.petitot@gmail.com?subject=Question &body=Merci de m'avoir contacté, je vous souhaite une agréable journée. Timothée Petitot" title="Lien vers ma boite email" rel="noopener"><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/timothee-petitot/" title="Lien vers LinkedIn" rel="noopener"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Projets</h2>
+            <p class="taCenter worksBg"><strong>Pure Intégration HTML/CSS</strong></p>
+            <div class="grid taCenter">
+                <article>
+                    <a href="hello-world/11-exo-hello-world/index.html" title="Lien vers le site helloworld" rel="noopener"><span class="title">Visualiser le site</span>
+                    <img src="./img/helloWorld.png" alt="Hello World" /></a>
+                </article>
+                <article>
+                    <a href="hiTech-NET/06-Exercice-final-HiTech-NET/correction-hitech/product-1.html" title="Lien vers le site HighTech" rel="noopener"><span class="title">Visualiser le site</span>
+                    <img src="./img/logo.svg" alt="HighTech" /></a>
+                </article>
+                <article>
+                    <a href="groupe1-Mangala/groupe1/index.html" title="Lien vers le site Mangala" rel="noopener"><span class="title">Visualiser le site</span>
+                    <img src="./img/mainLogoMangala.png" alt="Mangala" /></a>
+                </article>
+                <article>
+                    <a href="freshlyrestau/freshly/index.html" title="Lien vers le site Freshly Restaurant" rel="noopener"><span class="title">Visualiser le site</span>
+                    <img src="./img/freshlyrestaurant.png" alt="Freshly Restaurant" /></a>
+                </article>
+
+            </div>
+            <p class="taCenter worksBg"><strong>Langage JavaScript & HTML/CSS</strong></p>
+            <div class="grid taCenter">
+                <article>
+                    <a href="pierreFeuilleCiseaux/index.html" title="Lien vers le site Pierre-Feuille-Ciseaux" rel="noopener"><span class="title">Visualiser le site</span>
+                    <img src="./img/rock.png" alt="Image Pierre du jeux Pierre-Feuille-Ciseaux" /></a>
+                </article>
+                <article></article>
+                <article></article>
+                <article></article>
+
+            </div>
+
+            <div class="padding flex wrap jc-space-evenly ai-center">
+                <a class="button" href="index.html" title="Lien vers mon profil" rel="noopener">Retour à <br>mon profil</a>
+
+                <a class="button" href="skills.html" title="Lien vers mes compétences" rel="noopener">Explorer mes compétences</a>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+    </footer>
+
+    <!--JS Perso-->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

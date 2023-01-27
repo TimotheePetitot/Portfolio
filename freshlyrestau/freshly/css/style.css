@@ -1,0 +1,565 @@
+/**************************GENERALITIES***************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merienda', cursive;
+}
+
+
+:root {
+    font-size: 62.5%;
+    --brown: #4c4343;
+    --cream: #ebe3db;
+    --red: #950000;
+    --font: 'Athiti', sans-serif;
+    --font-size-default: 1.8rem;
+    --font-size-title: 3rem;
+    --font-size-sous-rubriques: 2.5rem;
+    --font-size-menus: 2rem;
+    --font-size-price: 5rem;
+    --font-size-under-menus: 1.5rem;
+    --font-size-title-footer: 1.8rem;
+    --font-size-footer-button: 1.6rem;
+
+}
+
+
+
+body {
+    font-size: var(--font-size-default);
+    font-family: 'Athiti', sans-serif;
+}
+
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+/**************************UTILITIES***************************************/
+
+.flex {
+    display: flex;
+}
+
+.jc-space-between {
+    justify-content: space-between;
+}
+
+.jc-space-around {
+    justify-content: space-around;
+}
+
+.jc-space-evenly {
+    justify-content: space-evenly;
+}
+
+.jc-space-center {
+    justify-content: center;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+
+/**************************HEADER***************************************/
+
+header {
+    text-align: center;
+}
+
+header img {
+    max-width: 15rem;
+}
+
+
+ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+nav li {
+    display: block;
+    padding: 1rem;
+    background-color: var(--cream);
+    border: .1rem solid var(--brown);
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(--brown);
+    font-size: var(--font-size-menus);
+    font-weight: bold;
+    text-align: center;
+
+}
+
+nav li:hover {
+    background-color: var(--brown);
+    border-top: .1rem solid #fff;
+    border-bottom: .1rem solid #fff;
+}
+
+nav li:hover a {
+    color: #fff;
+}
+
+.homepage,
+.aboutpage,
+.contactpage,
+.menuspage {
+    background-color: var(--brown);
+    color: #fff;
+}
+
+.homepage a,
+.aboutpage a,
+.contactpage a,
+.menuspage a {
+    color: #fff;
+}
+
+.top {
+    background: linear-gradient(180deg, var(--cream) 30%, #fff 70%);
+    margin: 0 auto;
+}
+
+strong {
+    font-size: var(--font-size-title);
+    color: var(--brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 1rem;
+
+}
+
+strong::before,
+strong::after {
+    font-family: "Font Awesome 6 Free";
+    font-size: 1rem;
+    content: "\f005";
+    color: #950000;
+    padding: 0 1rem;
+}
+
+/*************************METAQUERIES****************************************/
+
+/* ********************** VERSION TABLETTE*780px*************************** */
+
+@media screen and (min-width:780px) {}
+
+/* ********************** VERSION DESKTOP*980px*************************** */
+
+@media screen and (min-width:980px) {
+
+
+    header {
+        padding: 2rem;
+    }
+
+    header div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        min-width: 30%;
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav li {
+        margin: 2rem;
+        border: .2rem solid var(--brown);
+    }
+
+    .floatRight {
+        float: right;
+        width: 40%;
+        margin-left: 1rem;
+    }
+
+    .specialMenus {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .background {
+        width: 33.33%;
+        margin: 2rem;
+    }
+
+    .wall article {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .wall article h4 {
+        width: 90%;
+        text-align: center;
+    }
+
+
+
+    .planning {
+        width: 33.33%;
+    }
+}
+
+
+/* ********************** CARROUSEL*************************** */
+
+.slider img {
+    width: 100%;
+}
+
+/*****Position slick************************/
+
+.slick-prev::before,
+.slick-next::before {
+    font-size: 5rem;
+    color: #888;
+}
+
+.slick-prev {
+
+    left: 1rem;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 4.5rem;
+}
+
+/**Position, taille et couleur dots*****/
+
+.slick-dots {
+    bottom: -3rem;
+}
+
+.slick-dots .slick-active button::before {
+    color: var(--red);
+    height: 5rem;
+}
+
+
+.slick-dots li button::before {
+    font-size: 1.5rem;
+    color: #888;
+}
+
+.slick-dots li:hover button::before {
+    font-size: 1.5rem;
+    color: var(--red);
+}
+
+.blanc {
+    margin-bottom: 10rem;
+}
+
+
+/**************************FOAT************************************/
+
+h1,
+.fa-solid {
+    text-align: center;
+    padding: 0rem .5rem;
+}
+
+.fa-solid {
+    color: var(--red);
+    font-size: 1rem;
+}
+
+.texte {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/**************************SPECIAL MENU********************************/
+
+.clear {
+    clear: both;
+}
+
+
+.background {
+    background-color: var(--cream);
+    width: 100%;
+    padding-bottom: 3rem;
+}
+
+h3 {
+    font-weight: bold;
+    margin: 1rem 0;
+    padding: 1rem 0;
+}
+
+.dotted {
+    border-bottom: .1rem dotted var(--brown);
+    padding-bottom: 1rem;
+    padding-left: 4rem;
+}
+
+.background img {
+    padding: 0;
+}
+
+.seeMore {
+    background-color: var(--brown);
+    color: #fff;
+    width: 90%;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 1rem;
+
+}
+
+.seeMore:hover {
+    background-color: var(--red);
+}
+
+.seeMore a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.seeMore i {
+    font-size: 2rem;
+    color: #fff;
+
+}
+
+/**************************HOVER Menu********************************/
+
+.price {
+    position: relative;
+    text-align: center;
+
+}
+
+.gris {
+    position: absolute;
+    top: 0;
+    background-color: rgba(76, 67, 67, 0);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: .5rem solid transparent;
+    background: rgba(76, 67, 67, 0);
+    padding: 3rem 2rem;
+}
+
+.hidden h5 {
+    color: transparent;
+    font-family: 'Athiti', sans-serif;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hidden p {
+    color: transparent;
+    font-family: 'Athiti', sans-serif;
+    font-style: italic;
+    margin: 1rem;
+}
+
+
+
+.hidden,
+.hidden h5,
+.hidden p,
+.gris {
+    transition: all 1s ease-in-out;
+}
+
+.gris:hover {
+    background: rgba(76, 67, 67, 0.9);
+}
+
+.gris:hover .hidden {
+    border: .5rem solid #fff;
+}
+
+.gris:hover .hidden h5 {
+    color: #fff;
+}
+
+.gris:hover .hidden p {
+    color: #fff;
+}
+
+
+/**************************Section pre-FOOTER********************************/
+
+.wall {
+    background: url(../instructions/ressources/images/footer-bg.jpg) no-repeat center/cover;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.wall>* {
+    color: #fff;
+}
+
+h4 {
+    border-bottom: .1rem dotted #fff;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    margin: 1rem auto;
+}
+
+.planning>* {
+    text-align: center;
+
+}
+
+
+.network a {
+    padding: 1rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+/**************************FOOTER********************************/
+
+footer img {
+    width: 10%;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer span {
+    text-decoration: underline;
+}
+
+
+/***************************PAGE MENUS*************************************/
+
+.btn {
+    /* Annule tout les styles par défaut du bouton */
+    all: unset;
+    display: block;
+    background-color: #888;
+    color: var(--brown);
+    font-weight: bold;
+    border: 1px solid #888;
+    padding: 0 2rem;
+    margin: 2rem;
+    transition: color .5s, background-color .5s;
+    cursor: pointer;
+    background-color: var(--cream);
+}
+
+.btn:hover {
+    background-color: var(--red);
+    color: #FFF;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--cream);
+}
+
+.gallery img {
+    width: 100%;
+    display: block;
+}
+
+.gallery article {
+    max-width: 30rem;
+    margin: 2rem;
+}
+
+
+
+.choose {
+    text-align: center;
+    font-style: italic;
+}
+
+
+#all~.all {
+    background-color: var(--red);
+    color: #fff;
+}
+
+#all~.fish {
+    background-color: var(--red);
+    color: #fff;
+}
+
+#all~.meat {
+    background-color: var(--red);
+    color: #fff;
+}
+
+#all~.vegan {
+    background-color: var(--red);
+    color: #fff;
+}

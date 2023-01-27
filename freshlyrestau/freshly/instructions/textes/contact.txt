@@ -1,0 +1,22 @@
+********** PAGE CONTACT **********
+
+Contact us
+
+If your want to make a reservation, please complete this form.
+
+Fields with * are required.
+
+Reservation
+Date
+Time
+Number of guests
+
+Details
+Name
+Email
+Telephone
+
+Further request
+
+
+Our location

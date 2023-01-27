@@ -1,0 +1,323 @@
+/**********************GENERAL*****************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    color: #414141;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav a {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 2.2rem;
+    background-color: #CB8606;
+    color: #fff;
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.titreAccueil,
+.titrePageInte {
+    font-size: 3rem;
+}
+
+.sousTitreAccueil,
+h3,
+nav li a {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+
+.colonneDroite {
+    font-size: 1.6rem;
+}
+
+.auteur {
+    font-size: 1.4rem;
+}
+
+img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+/***************ACCUEIL*******HEADER*****************************************/
+
+header {
+    background: url(../instructions/images/path.png) repeat-x bottom #00748D;
+}
+
+ul {
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    color: #fff;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    text-decoration: none;
+}
+
+.pageHover {
+    background-color: #fff;
+    color: #414141;
+}
+
+ul li a:hover {
+    background-color: #fff;
+    color: #414141;
+}
+
+.container {
+    max-width: 1500px;
+    padding: 2rem;
+
+
+}
+
+.inLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inlineLogo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.pLogo {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: inline;
+
+}
+
+.flex {
+    display: flex;
+    align-items: start-end;
+}
+
+
+/***************ACCUEIL*******HEADER***********MEDIA QUERIES******************************/
+
+@media screen and (max-width:1100px) {
+    /*Tablette*/
+    .inLine {
+        flex-wrap: wrap;
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width:630px) {
+    /*Small Mobile*/
+    nav li {
+        display: block;
+        /*ERREUR : LE LI EST DEJA UN BLOCK, IL FAUT METTRE DANS LE A!!!!!!!!!!!!!!!!!!!!!!!*/
+    }
+
+}
+
+/**********************Background*****************************************/
+
+.background {
+    background: url(../instructions/images/bg-header.jpg) center/cover;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background p {
+    background-color: #fff;
+    color: #00748D;
+    padding: 1rem;
+}
+
+
+/**********************MAIN*****************************************/
+
+main h2 {
+    text-align: center;
+    color: #00748D;
+    padding-top: 5rem;
+}
+
+main h2::before,
+main h2::after {
+    content: " - ";
+    color: #00748D;
+}
+
+main img {
+    border: .2rem solid #00748D;
+}
+
+.awe {
+    padding: .5rem;
+    color: #fff;
+    background-color: #CB8606;
+}
+
+/*.inLine article {
+    text-align: center;
+    margin: 1rem;
+}*/
+
+main a {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #00748D;
+    color: #fff;
+
+}
+
+.mainFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.mainFlex article {
+    padding: 2rem;
+    text-align: center;
+}
+
+.mainFlex article p {
+    text-align: left;
+}
+
+/***************ACCUEIL*******MAIN***********MEDIA QUERIES******************************/
+
+@media screen and (max-width:1100px) {
+    /*Tablette*/
+    .inlineLogo {
+        flex-wrap: wrap;
+        width: 50%;
+        margin: 0 auto;
+
+    }
+
+    .mainFlex {
+        flex-wrap: wrap;
+    }
+    .mainFlex article {
+        width: 50%;
+    }
+
+    main img {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:780px) {
+    /*Small Mobile*/
+    .mainFlex article {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+}
+
+/**********************FOOTER*****************************************/
+
+.footer1 {
+    background: url(../instructions/images/path.png) repeat-x bottom #00748D;
+}
+
+.footer2 {
+    background-color: #333;
+    text-align: center;
+}
+
+.reseaux a {
+    color: #fff;
+    padding: .5rem;
+}
+
+.footer2 p {
+    color: #fff;
+}
+
+.footer2 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer2 img {
+    width: 10%;
+
+}
+
+.footerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/***************Footer***********MEDIA QUERIES******************************/
+
+/*@media screen and (max-width:1100px) {
+    /*Tablette*/
+
+/*  {}
+}
+*/
+
+@media screen and (max-width:780px) {
+    /*Small Mobile*/
+    .footerFlex {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+
+    .footerFlex article {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:630px) {
+    /*Small Mobile*/
+    nav li {
+        display: block;
+    }
+}

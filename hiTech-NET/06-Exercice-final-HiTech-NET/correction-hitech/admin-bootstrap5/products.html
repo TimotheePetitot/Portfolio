@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des produits - HiTech.NET</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/d926070460.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!---------------- NAV ------------------>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo HiTech.NET" loading="lazy">
+                HiTech.NET
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <h1 class="navbar-text h2">Gestion des produits</h1>
+
+                <ul class="navbar-nav ms-auto me-5">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img alt="Avatar de Bob" src="img/avatar.png" width="48"> Bob
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Mon compte</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Déconnexion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!---------------- end NAV ------------------>
+
+    <!---------------- CONTENT ------------------>
+    <div class="container-fluid">
+        <div class="row">
+            <!---------------- ASIDE ------------------>
+            <aside class="col-md-3 p-3 d-none d-md-block bg-light">
+                <nav class="nav nav-pills flex-column">
+                    <h4 class="my-4 text-muted"><i class="fa fa-home"></i> Accueil</h4>
+                    <a class="nav-item nav-link" href="#">Tableau de bord</a>
+
+                    <h4 class="my-4 text-muted"><i class="fa fa-globe"></i> Site web</h4>
+                    <a class="nav-item nav-link" href="#">Gestion des rubriques</a>
+                    <a class="nav-item nav-link" href="#">Gestion des actualités</a>
+
+                    <h4 class="my-4 text-muted"><i class="fa fa-shopping-basket"></i> Boutique</h4>
+                    <a class="nav-item nav-link" href="#">Gestion des rayons</a>
+                    <a class="nav-item nav-link active" href="products.html">Gestion des produits</a>
+                    <a class="nav-item nav-link" href="#">Gestion des commandes</a>
+
+                    <h4 class="my-4 text-muted"><i class="fa fa-cogs"></i> Paramètres</h4>
+                    <a class="nav-item nav-link" href="#">Gestion des utilisateurs</a>
+                    <a class="nav-item nav-link" href="#">Gestion des rôles</a>
+                    <a class="nav-item nav-link" href="#">Préférences</a>
+                </nav>
+            </aside>
+            <!---------------- end ASIDE ------------------>
+
+
+            <!---------------- MAIN ------------------>
+            <main class="col-md-9 p-3">
+
+                <form class="row my-4">
+
+                    <div class="col-sm-5">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <input class="form-control" type="search" placeholder="" aria-label="Search">
+                            </div>
+                            <div class="col-sm-4">
+                                <input class="btn btn-outline-secondary" type="submit" value="Rechercher"></input>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-7 text-sm-end">
+                        <a href="product_empty.html" class="btn btn-primary">
+                            <i class="fa fa-plus"></i> Ajouter un produit</a>
+                        </a>
+                    </div>
+
+                </form>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Statut</th>
+                                    <th>Boutique</th>
+                                    <th>Rayon</th>
+                                    <th>Produit</th>
+                                    <th class="text-end">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-success">En boutique</td>
+                                    <td>Péripheriques & composants</td>
+                                    <td>Ecrans d'ordinateur</td>
+                                    <td>AOC 24B1XHS</td>
+                                    <td class="text-end">
+                                        <a class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#delete" href="#"><i class="fa fa-archive"></i> Retirer</a>
+                                        <a class="btn btn-sm btn-outline-secondary" href="product-1.html"><i class="fa fa-pencil"></i> Modifier</a>
+                                        <a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-tags"></i> Caractéristiques</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-success">En boutique</td>
+                                    <td>Péripheriques & composants</td>
+                                    <td>Ecrans d'ordinateur</td>
+                                    <td>AOC 24B2XHS</td>
+                                    <td class="text-end">
+                                        <a class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#delete" href="#"><i class="fa fa-archive"></i> Retirer</a>
+                                        <a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-pencil"></i> Modifier</a>
+                                        <a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-tags"></i> Caractéristiques</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-danger">Retiré</td>
+                                    <td>Péripheriques & composants</td>
+                                    <td>Ecrans d'ordinateur</td>
+                                    <td>AOC 24B3XHS</td>
+                                    <td class="text-end">
+                                        <a class="btn btn-sm btn-outline-success" href="#"><i class="fa fa-check-square"></i> Remettre</a>
+                                        <a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-pencil"></i> Modifier</a>
+                                        <a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-tags"></i> Caractéristiques</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">En attente</td>
+                                    <td>Péripheriques & composants</td>
+                                    <td>Ecrans d'ordinateur</td>
+                                    <td>AOC 24B4XHS</td>
+                                    <td class="text-end">
+                                        <a class="btn btn-sm btn-outline-success" href="#"><i class="fa fa-check-square"></i> Mettre en boutique</a>
+                                        <a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-pencil"></i> Modifier</a>
+                                        <a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-tags"></i> Caractéristiques</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- end table -->
+                    </div>
+                    <!-- en table responsive -->
+
+                    <!-- Pagination -->
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a class="page-link" href="#"><i class="fa fa-chevron-left"></i></a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-chevron-right"></i></a></li>
+                        </ul>
+                    </nav>
+                    <!-- end Pagination -->
+
+                </div>
+                <!-- end row -->
+
+
+            </main>
+            <!---------------- end MAIN ------------------>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container-fluid -->
+    <!---------------- end CONTENT ------------------>
+
+
+    <!---------------- Modal ------------------>
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger" id="exampleModalLabel"><i class="fa fa-archive"></i> Retrait d'un produit</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Attention, le produit ne sera plus visible sur le site
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-danger">Retirer le produit de la boutique</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------- end Modal ------------------>
+
+
+
+    <!-- JavaScript Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+
+</html>

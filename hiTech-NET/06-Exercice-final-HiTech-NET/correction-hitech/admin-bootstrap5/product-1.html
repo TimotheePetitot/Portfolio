@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit: AOC 24B1XHS - HiTech.NET</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/d926070460.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!---------------- NAV ------------------>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo HiTech.NET" loading="lazy">
+                HiTech.NET
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <h1 class="navbar-text h2">Produit: AOC 24B1XHS</h1>
+
+                <ul class="navbar-nav ms-auto me-5">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img alt="Avatar de Bob" src="img/avatar.png" width="48"> Bob
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Mon compte</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Déconnexion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!---------------- end NAV ------------------>
+
+    <!---------------- CONTENT ------------------>
+    <div class="container-fluid">
+        <div class="row">
+            <!---------------- ASIDE ------------------>
+            <aside class="col-md-3 p-3 d-none d-md-block bg-light">
+                <nav class="nav nav-pills flex-column">
+                    <h4 class="my-4 text-muted"><i class="fa fa-home"></i> Accueil</h4>
+                    <a class="nav-item nav-link" href="#">Tableau de bord</a>
+
+                    <h4 class="my-4 text-muted"><i class="fa fa-globe"></i> Site web</h4>
+                    <a class="nav-item nav-link" href="#">Gestion des rubriques</a>
+                    <a class="nav-item nav-link" href="#">Gestion des actualités</a>
+
+                    <h4 class="my-4 text-muted"><i class="fa fa-shopping-basket"></i> Boutique</h4>
+                    <a class="nav-item nav-link" href="#">Gestion des rayons</a>
+                    <a class="nav-item nav-link active" href="products.html">Gestion des produits</a>
+                    <a class="nav-item nav-link" href="#">Gestion des commandes</a>
+
+                    <h4 class="my-4 text-muted"><i class="fa fa-cogs"></i> Paramètres</h4>
+                    <a class="nav-item nav-link" href="#">Gestion des utilisateurs</a>
+                    <a class="nav-item nav-link" href="#">Gestion des rôles</a>
+                    <a class="nav-item nav-link" href="#">Préférences</a>
+                </nav>
+            </aside>
+            <!---------------- end ASIDE ------------------>
+
+
+            <!---------------- MAIN ------------------>
+            <main class="col-md-9 p-3">
+
+                <form>
+                    <!-- Bouton -->
+                    <div class="row my-4">
+                        <div class="col-sm-6">
+                            <a href="" class="btn btn-outline-secondary">
+                                <i class="fa fa-times"></i> Annuler les modifications
+                            </a>
+                        </div>
+                        <div class="col-sm-6 text-sm-end">
+                            <a href="" class="btn btn-primary">
+                                <i class="fa fa-check"></i> Valider et enregistrer la fiche
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end Bouton -->
+
+                    <!-------------- Fieldset Gestion -------------->
+                    <fieldset class="my-4 p-3 bg-light">
+                        <legend class=" mb-3">Gestion</legend>
+
+                        <div class="row my-3">
+                            <div class="col-sm-3 mb-2">Statut</div>
+                            <div class="col-sm-9">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="status-draft" id="status-draft" value="status-draft">
+                                    <label class="form-check-label text-muted" for="status_draft">
+                                        En attente de mise en ligne
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" checked type="radio" name="status-ok" id="status-ok" value="status-ok">
+                                    <label class="form-check-label text-success" for="status-ok">
+                                        En boutique
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="status-off" id="status-off" value="status-off">
+                                    <label class="form-check-label text-danger" for="status-off">
+                                        Retiré
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+
+                        <div class="row my-3">
+                            <label for="store" class="col-sm-3 mb-2">Boutique</label>
+                            <div class="col-sm-9">
+                                <select class="form-select" id="store" name="store">
+                                    <option value="0">Choisir une boutique ...</option>
+                                    <option value="1">Ordinateurs</option>
+                                    <option value="2" selected>Péripheriques &amp; composants</option>
+                                    <option value="3">Téléphones</option>
+                                    <option value="4">Objets connecté</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+
+                        <div class="row my-3">
+                            <label for="shelf" class="col-sm-3 mb-2">Rayon</label>
+                            <div class="col-sm-9">
+                                <select class="form-select" id="shelf" name="shelf">
+                                    <option value="0">Choisir un rayon ...</option>
+                                    <option value="1" selected>Ecrans d'ordinateur</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </fieldset>
+
+                    <!-------------- Fieldset Présentation -------------->
+                    <fieldset class="my-4 p-3 bg-light">
+                        <legend class=" mb-3">Présentation</legend>
+
+                        <div class="row my-3">
+                            <label for="product_brand" class="col-sm-3 mb-2">Marque</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="product_brand" name="product_brand" value="AOC">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_ref" class="col-sm-3 mb-2">Référence du produit</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="product_ref" name="product_ref" value="24B1XHS">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_price" class="col-sm-3 mb-2">Prix</label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <span class="input-group-text">Prix</span>
+                                    <input type="text" class="form-control" value="109.94" id="product_price" name="product_price">
+                                    <span class="input-group-text">€</span>
+
+                                    <span class="input-group-text">éco-participation</span>
+                                    <input type="text" class="form-control" value="1.70" id="product_price" name="product_price">
+                                    <span class="input-group-text">€</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_desc" class="col-sm-3 mb-2">Description principale (MarkDown)</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" rows="20" id="product_desc" name="product_desc">
+Un écran 23,8" Full HD et sans bords; c'est sûrement votre futur moniteur pour la maison ou le bureau. AOC vous propose le 24B1XHS, un produit élégant au look doté d'une dalle VA avec un temps de réponse rapide de 7 ms en résolution 1920 x 1080 pixels. Cet écran WLED très fonctionnel offre un contenu avec un fréquence de 60 Hz, idéal pour tous les usages du quotidien.
+
+- Écran large de 23.8" avec résolution Full HD (1920 x 1080)
+- Des couleurs riches et nuancées avec un contraste dynamique de 20.000.000:1 (typique 1000:1)
+- Temps de réponse de 7 ms
+- Dalle IPS
+- Luminosité 250 cd/m²
+- Modes Flicker-Free et Anti-lumière bleue (Low blue mode)
+- Connecteurs : HDMI 1.4, VGA
+- Design sans contour & profil plat
+- Consommation d'énergie modeste : 25 Watts
+- Dimensions (avec support) : 419.8 x 540.1 x 186.8 mm
+- Poids : 2.48 kg
+                                </textarea>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </fieldset>
+
+                    <!-------------- Fieldset Photo -------------->
+                    <fieldset class="my-4 p-3 bg-light">
+                        <legend class=" mb-3">Photos</legend>
+
+                        <div class="row my-3">
+                            <label for="product_photo_1" class="col-sm-3 mb-2">Photo 1</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="file" id="product_photo_1" name="product_photo_1">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_photo_2" class="col-sm-3 mb-2">Photo 2</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="file" id="product_photo_2" name="product_photo_2">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_photo_3" class="col-sm-3 mb-2">Photo 3</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="file" id="product_photo_3" name="product_photo_3">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_photo_4" class="col-sm-3 mb-2">Photo 4</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="file" id="product_photo_4" name="product_photo_4">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_photo_5" class="col-sm-3 mb-2">Photo 5</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="file" id="product_photo_5" name="product_photo_5">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </fieldset>
+
+
+                    <!-------------- Fieldset description 1 -------------->
+                    <fieldset class="my-4 p-3 bg-light">
+                        <legend class=" mb-3">Descriptif 1</legend>
+
+                        <div class="row my-3">
+                            <label for="product_desc_1_title" class="col-sm-3 mb-2">Titre</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="product_desc_1_title" name="product_desc_1_title" value="Un moniteur Full HD performant et tout en finesse">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_desc_1_file" class="col-sm-3 mb-2">Image</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="file" id="product_desc_1_file" name="product_desc_1_file">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_desc_1_text" class="col-sm-3 mb-2">Texte</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" rows="12" id="product_desc_1_text" name="product_desc_1_text">Issu de la série B1, le moniteur AOC 24B1XHS dispose de tous les atouts indispensables pour offrir une expérience utilisateur agréable. Son écran Full HD de 23.8" s'accompagne d'une dalle IPS ainsi que d'un temps de réponse de 7 ms pour une image toujours performante. Aussi, le 24B1XHS séduit par son profil plat et son design sans contour qui favorise le plaisir visuel et l'immersion. Ce moniteur WLED trouvera facilement une place de choix sur votre bureau pour toutes vos utilisations quotidiennes.</textarea>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </fieldset>
+
+
+                    <!-------------- Fieldset description 2 -------------->
+                    <fieldset class="my-4 p-3 bg-light">
+                        <legend class=" mb-3">Descriptif 2</legend>
+
+                        <div class="row my-3">
+                            <label for="product_desc_2_title" class="col-sm-3 mb-2">Titre</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="product_desc_2_title" name="product_desc_2_title" value="Appréciez le design sans contour">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_desc_2_file" class="col-sm-3 mb-2">Image</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="file" id="product_desc_2_file" name="product_desc_2_file">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_desc_2_text" class="col-sm-3 mb-2">Texte</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" rows="12" id="product_desc_2_text" name="product_desc_2_text">En plus du look moderne et attrayant qu'il procure, le design sans contour permet des configurations à plusieurs écrans sans interruption. Votre curseur, vos fenêtres ne sont plus perdus dans les abysses sombres des contours lorsque plusieurs écrans sont placés les uns à côté des autres. Le profil plat de ce moniteur AOC offre de nombreux avantages. Très élégant sous tous les angles, il devient un choix idéal dans les espaces publics. Sa finesse et sa conception moderne lui permettent d'occuper moins de place sur le bureau.</textarea>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </fieldset>
+
+
+                    <!-------------- Fieldset description 3 -------------->
+                    <fieldset class="my-4 p-3 bg-light">
+                        <legend class=" mb-3">Descriptif 3</legend>
+
+                        <div class="row my-3">
+                            <label for="product_desc_3_title" class="col-sm-3 mb-2">Titre</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="product_desc_3_title" name="product_desc_3_title" value="Tout le confort nécessaire">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_desc_3_file" class="col-sm-3 mb-2">Image</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="file" id="product_desc_3_file" name="product_desc_3_file">
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row my-3">
+                            <label for="product_desc_3_text" class="col-sm-3 mb-2">Texte</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" rows="12" id="product_desc_3_text" name="product_desc_3_text">Agréable visuellement et intuitif, ce moniteur dispose également d'une dalle IPS. Cette dernière reproduit des couleurs éclatantes et offre de très larges angles de vue. De cette façon, les images gardent toujours un excellent aspect et une parfaite précision, quel que soit l'angle auquel vous regardez l'écran. Vous voulez utiliser votre écran même dans un environnement très lumineux, à côté d'une fenêtre au soleil par exemple ? La haute luminosité de 250 cd/m² garantit une bonne visibilité, même dans des conditions difficiles.</textarea>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </fieldset>
+
+
+                </form>
+
+            </main>
+            <!---------------- end MAIN ------------------>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container-fluid -->
+    <!---------------- end CONTENT ------------------>
+
+
+    <!-- JavaScript Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+
+</html>

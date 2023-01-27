@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100rem;
+    margin: 0 auto;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+/*********************************HEADER***************************/
+
+header {
+    text-align: center;
+    margin: 0 auto;
+}
+
+nav {
+
+    background-color: #40CCEA;
+
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+/*********************************MAIN***************************/
+
+/*********************************image**/
+
+.floatLeft {
+    float: left;
+    margin-right: 1rem;
+}
+
+.floatRight {
+    float: right;
+    margin-left: 1rem;
+}
+
+.width50 {
+    width: 50%;
+    height: 100%;
+}
+
+
+/*********************************section**/
+
+h1 {
+    padding-top: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 4.5rem;
+    color: #40CCEA;
+    word-spacing: 1rem;
+    border-bottom: .1rem dotted #40CCEA;
+    width: 90%;
+
+}
+
+.clear {
+    clear: both
+}
+
+.flex {
+    display: flex;
+}
+
+
+.borderBottom {
+    border-bottom: .1rem solid black;
+}
+
+.margin {
+    margin: 2rem;
+}
+
+.enSavoirPlus {
+    background-color: #0096D0;
+    border-radius: .6rem;
+    width: 30%;
+    padding: .1rem;
+}
+
+.enSavoirPlus a {
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*********************************TABLEAU***************************/
+
+.tableau {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.tableau th,
+.tableau td {
+    padding: 1em;
+    border: 1px solid #ddd;
+}
+
+.tableau tbody tr:nth-child(odd) td {
+    background-color: #eee;
+}
+
+/*********************************A PROPOS***************************/
+
+.aPropos {
+    background-color: #fff;
+    padding: 2rem;
+    max-width: 50%;
+
+}
+
+.ile {
+    background: url(../instructions/ressources/fond.jpg) no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    height: 70rem;
+    margin-top: 5rem;
+}
+
+
+/*********************************ME CONTACTER***************************/
+
+.container p {
+    margin: 0;
+}
+
+.container p a {
+    text-decoration: none;
+    font-style: italic;
+}
+
+
+/*********************************FORMULAIRE***************************/
+
+.map {
+    background: url(../instructions/ressources/map-image.png) no-repeat center/cover;
+    background-color: #333;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+.envoyer {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/*********************************FOOTER***************************/
+
+footer {
+    background-color: #40CCEA;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer span {
+    text-decoration: underline;
+}

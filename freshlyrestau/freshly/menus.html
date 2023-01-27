@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exo Freshly</title>
+
+    <meta name="Exo Freshly" content="Exo Freshly - recette de cuisine">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--GOOGLEFONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Merienda:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Merienda:wght@300;400;500;600;700;800;900&display=swap');
+    </style>
+
+    <!--FONTAWESOME-->
+    <script src="https://kit.fontawesome.com/d5af8b1db6.js" crossorigin="anonymous"></script>
+
+    <!--Appel CSS slick-->
+    <link rel="stylesheet" href="slick/slick.css" type="text/css" />
+    <link rel="stylesheet" href="slick/slick-theme.css" type="text/css" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+    <header class="top">
+        <div class="container">
+            <article class="logo">
+                <img src="instructions/ressources/images/logo.png" alt="Logo Freshly Restaurant">
+                <strong>Freshly Restaurant</strong>
+            </article>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html" title="Home" rel="noopener">Home</a></li>
+                    <li>
+                        <a href="about.html" title="about" rel="noopener">About</a></li>
+                    <li class="menuspage">
+                        <a href="menus.html" title="contact" rel="noopener">Menus</a></li>
+                    <li>
+                        <a href="contact.html" title="menus" rel="noopener">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="flex ai-center jc-space-center">
+            <i class="fa-solid fa-star"></i>
+            <h2> Details of our menus </h2>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="choose">choose our main course according to your menus!</p>
+
+        <div class="filtreGallery">
+            <nav class="filters">
+                <input type="checkbox" name="all" id="all" />
+                <label for="all">Cliquez-ici</label>
+                <button class="btn all" type="button" data-filter="all">All</button>
+                <button class="btn fish" type="button" data-filter=".fish">Fish</button>
+                <button class="btn meat" type="button" data-filter=".meat">Meat</button>
+                <button class="btn vegan" type="button" data-filter=".vegan">Vegan</button>
+            </nav>
+
+
+            <section class="gallery">
+                <article class="mix fish">
+                    <img src="instructions/ressources/menus/fish-01.jpg" alt="fish">
+                </article>
+                <article class="mix fish">
+                    <img src="instructions/ressources/menus/fish-02.jpg" alt="fish">
+                </article>
+                <article class="mix fish">
+                    <img src="instructions/ressources/menus/fish-03.jpg" alt="fish">
+                </article>
+                <article class="mix meat">
+                    <img src="instructions/ressources/menus/meat-01.jpg" alt="meat">
+                </article>
+                <article class="mix meat">
+                    <img src="instructions/ressources/menus/meat-02.jpg" alt="meat">
+                </article>
+                <article class="mix meat">
+                    <img src="instructions/ressources/menus/meat-03.jpg" alt="meat">
+                </article>
+                <article class="mix vegan">
+                    <img src="instructions/ressources/menus/vegan-01.jpg" alt="vegan">
+                </article>
+                <article class="mix vegan">
+                    <img src="instructions/ressources/menus/vegan-02.jpg" alt="vegan">
+                </article>
+                <article class="mix vegan">
+                    <img src="instructions/ressources/menus/vegan-03.jpg" alt="vegan">
+                </article>
+            </section>
+        </div>
+
+        <div class="flex ai-center jc-space-center">
+            <i class="fa-solid fa-star"></i>
+            <h2> Deserts </h2>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="choose">choose our main course according to your menus!</p>
+
+        <div class="filtreGallery">
+
+            <section class="gallery">
+                <article class="mix dessert">
+                    <img src="instructions/ressources/menus/desert-01.jpg" alt="dessert">
+                </article>
+                <article class="mix fish">
+                    <img src="instructions/ressources/menus/desert-02.jpg" alt="dessert">
+                </article>
+                <article class="mix fish">
+                    <img src="instructions/ressources/menus/desert-03.jpg" alt="dessert">
+                </article>
+            </section>
+        </div>
+
+        <div class="flex ai-center jc-space-center">
+            <i class="fa-solid fa-star"></i>
+            <h2> Cocktails </h2>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="choose">choose our main course according to your menus!</p>
+
+        <div class="filtreGallery">
+
+            <section class="gallery">
+                <article class="mix dessert">
+                    <img src="instructions/ressources/menus/drink-01.jpg" alt="dessert">
+                </article>
+                <article class="mix fish">
+                    <img src="instructions/ressources/menus/drink-02.jpg" alt="dessert">
+                </article>
+                <article class="mix fish">
+                    <img src="instructions/ressources/menus/drink-03.jpg" alt="dessert">
+                </article>
+            </section>
+        </div>
+
+        <section class="wall">
+            <article class="container">
+                <div class="planning">
+                    <h4>Opening hours</h4>
+                    <p>Monday: Closed</p>
+                    <p>Tue-Wed : 9am - 10pm</p>
+                    <p>Thu-Fri : 9am - 10pm</p>
+                    <p>Sat-Sun : 5pm - 10pm</p>
+                </div>
+
+                <div class="planning">
+                    <h4>Contact</h4>
+                    <p>13 Christopher Street</p>
+                    <p>New York,</p>
+                    <p>NY 10014-3543</p>
+                    <p>+01 2000 800 9999</p>
+                </div>
+
+                <div class="planning">
+                    <h4>Opening hours</h4>
+                    <ul class="flex ai-center jc-space-center">
+                        <li class="inlineBlock network"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li class="inlineBlock network"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="inlineBlock network"><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p><a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/"><img alt="Propriété de la 3W Academy" src="https://3wa.fr/wp-content/themes/3wa2015/img/logos/big.png"></a></p>
+            <p>Cet exercice de <a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/"><span>3W Academy</span></a> est mis à disposition <span>pour l'usage personnel des étudiants. Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification - International.</span>                Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de contact@3wa.fr. Les maquettes ont été réalisées par <span>Catherine Denos.</span>
+            </p>
+        </div>
+    </footer>
+
+
+    <!--Appel jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!--Appel JS slick-->
+    <!--<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.slider').slick({
+            dots: true
+        });
+    });
+    </script>-->
+
+    <script type="text/javascript" src="lib/mixitup.min.js"></script>
+    <script>
+        let mixer = mixitup('.filtreGallery');
+    </script>
+
+</body>
+
+</html>
