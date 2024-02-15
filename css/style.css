@@ -66,6 +66,7 @@ body {
 .background {
     background: url(../img/background-portfolio.jpg) repeat center/cover;
     height: 100vh;
+    opacity: .8;
 }
 
 img {
@@ -100,6 +101,7 @@ h6,
 p {
     padding-right: 2rem;
     padding-left: 2rem;
+    opacity: 1;
 }
 
 .taCenter {
@@ -231,7 +233,8 @@ nav {
     padding: 1rem 2rem;
     margin: 2rem;
     width: 40%;
-    transition: all .3s ease-in-out
+    transition: all .3s ease-in-out;
+    opacity: 1
 }
 
 .button:hover {
@@ -257,6 +260,7 @@ strong {
 
 .skills {
     width: 100%;
+    opacity: .8;
 }
 
 .skills li {
@@ -350,6 +354,7 @@ strong {
 .worksBg {
     background-color: var(--dark);
     margin: .2rem;
+    opacity: .8;
 }
 
 .skillsBg li {
