@@ -65,7 +65,11 @@ body {
 
 .background {
     background: url(../img/background-portfolio.jpg) repeat center/cover;
-    height: 100vh;
+    opacity: .8;
+}
+
+.background-cosmos {
+    background: url(../img/cosmos.jpg) repeat center/cover;
     opacity: .8;
 }
 
@@ -163,6 +167,9 @@ p {
     padding: 2rem 1rem;
 }
 
+a {
+    text-decoration: none;
+}
 
 /**************************HEADER***************************************/
 
@@ -248,10 +255,6 @@ nav {
 
 /*********Profil********************/
 
-.textPresentation {
-    background-color: var(--dark);
-}
-
 strong {
     color: var(--purple);
 }
@@ -321,7 +324,7 @@ strong {
 }
 
 .title {
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h3);
     letter-spacing: .4rem;
     position: absolute;
     z-index: 1;
@@ -369,16 +372,14 @@ strong {
 /************footer***********************/
 
 footer {
-    position: relative;
+    height: 12rem;
+    font-size: 12px;
 }
 
 .message {
-    color: var(--purple);
+    color: var(--blue);
     text-align: right;
-    position: absolute;
-    right: 0;
-    bottom: -50rem;
-
+    padding-top: 2rem;
 }
 
 /*************************MEDIAQUERIES****************************************/
@@ -388,7 +389,7 @@ footer {
 @media screen and (max-width:800px) {
     .nav-list {
         position: fixed;
-        top: 0;
+        top:0;
         right: 0;
         display: flex;
         flex-direction: column;
@@ -500,5 +501,107 @@ footer {
 
     .button {
         width: 100%;
+    }
+}
+
+
+/*************************** Appliquer le style général des avis***********************************/
+.alignh2{
+    text-align: center;
+}
+#tr-container{
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+/* Appliquer le style à l'intérieur du commentaire gris*/
+.inner-tr-container {
+    width: 350px;
+    padding: 10px;
+    margin: 5px;
+    height: auto;
+    background: #9797971a;
+    border: 1px solid #e8e8e1;
+}
+
+/* Appliquer le style aux étoiles */
+.stars-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.svg-star {
+    width: 150px;
+    padding-right: 15px;
+}
+
+/* Appliquer le style au texte à côté des étoiles */
+.inner-text {
+width: 80%;
+    color: #bdbcbc;
+    font-size: 11px;
+}
+
+
+.title-block {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.subtext-block {
+    margin-bottom: 10px;
+font-size: 12px;
+}
+
+.author-block {
+    margin-bottom: 10px;
+font-size: 13px;
+}
+
+.malt-img{
+width:30px;
+height:30px;
+}
+
+.height-for-comment{
+    height: 400px;
+}
+
+.main-height-for-comment{
+    height: 450px;
+}
+
+@media screen and (max-width:950px) {
+    #tr-container{
+        margin: 50px auto;
+    }
+.inner-tr-container {
+    width: 300px;
+}
+}
+@media screen and (max-width:750px) {
+    #tr-container{
+        flex-wrap: wrap;
+    }
+    .inner-tr-container {
+        width: 30%;
+    }
+    .height-for-comment{
+        height: 500px;
+    }
+    
+    .main-height-for-comment{
+        height: 560px;
+    }
+    }
+@media screen and (max-width:600px) {
+    #tr-container{
+        flex-direction: column;
+    }
+    .inner-tr-container {
+        width: 80%;
+        height: auto;
+        margin: 10px auto;
     }
 }
