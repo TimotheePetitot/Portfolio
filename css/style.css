@@ -636,7 +636,7 @@ height:30px;
     width: 50%;
 }
 
-
+/*Style des fleches du slider*/
 .slick-prev::before,
 .slick-next::before {
     font-size: 3rem;
@@ -681,4 +681,11 @@ height:30px;
     font-size: 1.5rem;
     color: var(--lightPurple) !important;
     opacity: 1;
+}
+/*suppression des fleches du slider en format mobile / tablette*/
+@media screen and (max-width:600px) {
+    .slick-prev::before,
+.slick-next::before, .slick-prev, .slick-next {
+    display: none;
+}
 }
