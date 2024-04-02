@@ -1,6 +1,8 @@
 /**************************GENERALITIES***************************************/
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -23,7 +25,7 @@ h6 {
     --purple: #794985;
     --lightPurple: #CA93B4;
     --font: 'Open Sans', sans-serif;
-    --font-size-default: 2.1rem;
+    --font-size-default: 1.8rem;
     --font-size-h1: 3.6rem;
     --font-size-h2: 3rem;
     --font-size-h3: 2.5rem;
@@ -65,20 +67,21 @@ body {
 
 .background {
     background: url(../img/background-portfolio.jpg) repeat center/cover;
-    opacity: .8;
+    opacity: 1;
 }
 
 .background-cosmos {
     background: url(../img/cosmos.jpg) repeat center/cover;
-    opacity: .8;
+    opacity: 1;
 }
 
 img {
     height: auto;
-    width: 60%;
+    width: 80%;
     object-fit: cover;
     text-align: center;
     margin: 0 auto;
+    opacity: 1;
 }
 
 #background-video {
@@ -202,11 +205,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    position: relative;
 }
 
 .nav-list {
     display: flex;
     list-style: none;
+    opacity: 1;
 }
 
 .nav-list li {
@@ -215,7 +220,7 @@ nav {
 
 .nav-list li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
 }
 
 .active i {
@@ -304,10 +309,10 @@ strong {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
     /*auto-fit gere les colonne seul en fonction de la largeur d'ecran*/
-    /*la fonction minmax donne la largeur a chaque portion en fonction de la largeur du container mais ne depasse pas 300px*/
+    /*la fonction minmax donne la largeur a chaque portion en fonction de la largeur du container mais ne depasse pas 150px*/
 }
 
 .grid img {
@@ -351,7 +356,7 @@ strong {
 
 .grid article:hover .title {
     z-index: 1;
-    opacity: 1;
+    opacity: .8;
 }
 
 .worksBg {
@@ -389,26 +394,31 @@ footer {
 @media screen and (max-width:800px) {
     .nav-list {
         position: fixed;
-        top:0;
-        right: 0;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transform: translateY(-100%);
+        transform: translateX(-100%);
         transition: transform .3s;
-        z-index: 98;
+        background-color: var(--dark);
     }
 
+
     .nav-list li {
-        margin: 1rem;
+        margin: 1rem 0;
         padding-left: 0;
     }
     .nav-list li a {
+        padding: 1.5rem 2rem;
         display: inline-block;
-        font-size: 1rem;
+        font-size: 2rem;
         transition: all .3s;
     }
+
     .nav-list li i {
         padding: .5rem;
     }
@@ -427,7 +437,7 @@ footer {
         cursor: pointer;
         width: 3rem;
         height: 3rem;
-        z-index: 99;
+        z-index: 9999;
 
     }
     /*Premiere ligne*/
@@ -458,15 +468,18 @@ footer {
 
     /*croix*/
     #burger-toggle:checked~.nav-list {
-        transform: translateY(10rem);
-        background-color: transparent;
-
+        transform: translateX(-0);
+        height: 100vh;
+        background-color: var(--dark);
+        opacity: 1 !important;
+        z-index: 998;
     }
 
     #burger-toggle:checked~.burger,
     #burger-toggle:checked~.burger .bar,
     #burger-toggle:checked~.nav-list li a {
         background-color: transparent;
+        z-index: 999;
     }
 
     #burger-toggle:checked~.burger .bar::before {
