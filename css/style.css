@@ -41,7 +41,7 @@ h1 {
 
 h2 {
     font-size: var(--font-size-h2);
-    padding: 4rem 0 2rem 0;
+    padding: 10rem 0 2rem 0;
     text-align: center;
 
 }
@@ -61,7 +61,7 @@ body {
 
 
 .container {
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -622,16 +622,18 @@ height:30px;
 
 
 /*STYLE DU SLIDER*/
+
 .slider img{
-    height: 30vh;
+    height: 100%;
     width: 100%;
-    object-fit: cover;
+    max-width: 800px;
+    object-fit: contain;
     object-position: top;
-    margin-bottom: 5rem;
+    margin: 3rem auto;
 }
 
 .slider-nav img {
-    width: 30%;
+    width: 50%;
 }
 
 
@@ -666,7 +668,7 @@ height:30px;
 
 /* style des dots */
 .slick-dots {
-    bottom: -2rem;
+    bottom: -4rem;
 }
 
 .slick-dots li button:before {
