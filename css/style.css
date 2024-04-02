@@ -35,6 +35,7 @@ h6 {
 h1 {
     font-size: var(--font-size-h1);
     text-align: center;
+    z-index: 1000;
 
 }
 
@@ -617,4 +618,65 @@ height:30px;
         height: auto;
         margin: 10px auto;
     }
+}
+
+
+/*STYLE DU SLIDER*/
+.slider img{
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 5rem;
+}
+
+.slider-nav img {
+    width: 30%;
+}
+
+
+.slick-prev::before,
+.slick-next::before {
+    font-size: 3rem;
+    color: var(--white);
+    opacity: 1;
+}
+
+.slick-prev {
+    left: 1rem;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 3rem;
+    z-index: 1;
+}
+
+/* Changement de la couleur lors du survol */
+.slick-prev:hover::before,
+.slick-next:hover::before {
+    color: var(--lightPurple);
+}
+
+/* Changement de la couleur lors du focus */
+.slick-prev:focus::before,
+.slick-next:focus::before {
+    color: var(--lightPurple);
+}
+
+/* style des dots */
+.slick-dots {
+    bottom: -2rem;
+}
+
+.slick-dots li button:before {
+    font-size: 1.5rem;
+    color: var(--white) !important;
+    opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+    font-size: 1.5rem;
+    color: var(--lightPurple) !important;
+    opacity: 1;
 }
