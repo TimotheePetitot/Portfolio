@@ -51,12 +51,21 @@ h3 {
 
 }
 
-
+html {
+    height: 100%; /* Garde la hauteur de l'html à 100% de la fenêtre */
+    margin: 0;
+    padding: 0;
+}
 body {
     font-size: var(--font-size-default);
     font-family: 'Open Sans', sans-serif;
     color: var(--white);
     line-height: 2;
+    min-height: 100vh; /* Assurez-vous que le body prend au moins la hauteur de la fenêtre */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -258,11 +267,9 @@ nav {
 }
 
 /**************************MAIN************************************/
-
-/*********Profil********************/
-
-strong {
-    color: var(--purple);
+main {
+    flex: 1;  /* Permet à main de prendre tout l'espace disponible, poussant le footer vers le bas */
+    min-height: 0;  /* Important pour les navigateurs qui gèrent mal flexbox avec des overflow */
 }
 
 /*********Skills********************/
@@ -310,8 +317,10 @@ strong {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, calc((100% - 3rem) / 4)));
+    /* Définit les colonnes de la grille. 'repeat(auto-fit, ...)' crée autant de colonnes que possible en fonction de la largeur disponible du conteneur. Chaque colonne aura une largeur minimale de 150px et une largeur maximale calculée pour permettre un maximum de quatre colonnes par ligne. La fonction 'calc((100% - 3rem) / 4)' calcule la largeur maximale de chaque colonne en soustrayant la largeur totale des espacements ('gap') entre les colonnes (ici 3rem pour trois gaps de 1rem chacun) et en divisant le reste par quatre, garantissant ainsi que pas plus de quatre colonnes ne puissent être affichées si l'espace le permet, tout en maintenant une présentation responsive. */
     gap: 1rem;
+    justify-content: center;
     /*auto-fit gere les colonne seul en fonction de la largeur d'ecran*/
     /*la fonction minmax donne la largeur a chaque portion en fonction de la largeur du container mais ne depasse pas 150px*/
 }
@@ -380,6 +389,7 @@ strong {
 footer {
     height: 12rem;
     font-size: 12px;
+    width: 100vw;
 }
 
 .message {
