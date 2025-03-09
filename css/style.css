@@ -384,8 +384,12 @@ main {
     border: none;
 }
 
-.rond{
-        border-radius: 50%; 
+.rond {
+    /* width: 150px; 
+    height: 150px;  */
+    border-radius: 50%; /* Rend l’image circulaire */
+    object-fit: cover; /* Assure un recadrage harmonieux */
+    display: block; /* Évite les marges indésirables */
 }
 /************footer***********************/
 
