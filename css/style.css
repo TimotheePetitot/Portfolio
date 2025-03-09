@@ -384,6 +384,9 @@ main {
     border: none;
 }
 
+.rond{
+        border-radius: 50%; 
+}
 /************footer***********************/
 
 footer {
